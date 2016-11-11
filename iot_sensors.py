@@ -8,3 +8,12 @@ print ("            |_____|                                  ")
 print (" ")
 print (" /////////////////////////////////////////////////// ")
 print (" ")
+
+
+import grove_i2c_temp_hum_mini
+import time
+
+t= grove_i2c_temp_hum_mini.th02()
+while True:
+	print("Temp: %.2fC\tHumidity:%.2f" %(t.getTemperature(),t.getHumidity()),"%")
+	time.sleep(.5)
